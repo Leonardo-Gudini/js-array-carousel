@@ -21,7 +21,7 @@
     height: 50vh;
 }
 
-.img-item.show{
+.show{
     display: block;
 }
 
@@ -40,10 +40,10 @@ img{
     cursor: pointer;
 }
 
-.back i{
+.back{
     left: 30px;
 }
 
-.forward i{
+.forward{
     right: 30px;
 }
