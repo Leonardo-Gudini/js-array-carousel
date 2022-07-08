@@ -21,11 +21,20 @@ imgItem[currentImg].classList.add("show");
 const forward = document.querySelector(".forward");
 const back = document.querySelector(".back")
 
+forward.classList.add("show")
+
 forward.addEventListener("click",
-    function(){
+    function() {
+        console.log(currentImg)
         imgItem[currentImg].classList.remove("show");
         currentImg++;
         imgItem[currentImg].classList.add("show");
+
+        back.classList.remove("hide");
+
+        if(currentImg == (imageList.length - 1)){
+            forward.classList.remove("show");
+        }
     }
 )
 
@@ -34,9 +43,11 @@ back.addEventListener("click",
         imgItem[currentImg].classList.remove("show");
         currentImg--;
         imgItem[currentImg].classList.add("show");
+
+       forward.classList.add("show");
+
+       if(currentImg == 0) {
+        back.classList.add("hide");
+       }
     }
 )
-
-
-
-
